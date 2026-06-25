@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certificate of Project Completion</title>
+<style>
+  :root{
+    --navy:#0b2d4d;
+    --gold:#e8b339;
+    --orange:#e0622f;
+    --text:#1c1c1c;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+  }
+  .certificate{
+    position:relative;
+    width:100%;
+    max-width:650px;
+    aspect-ratio:210/297;
+    background:#fff;
+    overflow:hidden;
+    box-shadow:0 10px 40px rgba(0,0,0,0.5);
+  }
+  .deco-svg{
+    position:absolute;
+    top:0;left:0;
+    width:100%;
+    height:100%;
+    z-index:2;
+    pointer-events:none;
+  }
+  .frame-svg{
+    position:absolute;
+    top:0;left:0;
+    width:100%;
+    height:100%;
+    z-index: 1;
+    pointer-events:none;
+  }
+
+  .content{
+    position:relative;
+    z-index:5;
+    padding:18% 9% 6% 9%;
+    text-align:center;
+  }
+  h1.title{
+    font-size:clamp(28px,7vw,42px);
+    font-weight:700;
+    letter-spacing:2px;
+    margin:0;
+    color:var(--text);
+  }
+  .subtitle{
+    font-size:clamp(15px,3.4vw,22px);
+    letter-spacing:3px;
+    color:var(--text);
+    margin:4px 0 22px 0;
+    font-weight:500;
+    text-align:center;
+  }
+  .body-text{
+    font-size:clamp(11px,2vw,14px);
+    line-height:1.5;
+    text-align:justify;
+    color:#333;
+    margin-top:30px;
+    margin-bottom:18px;
+  }
+  .section-heading{
+    color:var(--orange);
+    font-style:italic;
+    font-weight:700;
+    font-size:clamp(13px,2.4vw,18px);
+    margin:14px 0 8px 0;
+    text-align:center;
+  }
+  .section-heading.dark{
+    color:var(--text);
+    font-style:italic;
+  }
+  .pm-name{
+    font-weight:700;
+    font-size:clamp(12px,2.2vw,14px);
+    margin:2px 0;
+    text-align:center;
+  }
+  .pm-info{
+    font-size:clamp(10px,1.9vw,12px);
+    color:#333;
+    line-height:1.5;
+    margin:0;
+    text-align:center;
+  }
+  .domain-text, .desc-text{
+    font-size:clamp(11px,2vw,13px);
+    color:#333;
+    line-height:1.6;
+    text-align:center;
+  }
+  .desc-text{
+    text-align:justify;
+  }
+  .footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-top:18px;
+    text-align:left;
+  }
+  .completion-date{
+    font-size:clamp(10px,1.9vw,13px);
+    margin:0 0 8px 0;
+  }
+  .completion-date b{font-weight:700;}
+
+  /* ---- Logo block (Cloud Detox) ---- */
+  .logo-block{
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .logo-icon{
+    width:30px;
+    height:30px;
+    flex-shrink:0;
+  }
+  .logo-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.05;
+    font-weight:800;
+    font-size:clamp(13px,2.6vw,16px);
+    letter-spacing:0.5px;
+  }
+  .logo-text .cloud{color:#1c1c1c;}
+  .logo-text .detox{color:#1ba9e1;}
+
+  .signature-block{
+    text-align:center;
+    margin-bottom:8px;
+  }
+
+  .signature{
+    font-family:'Brush Script MT','Segoe Script', cursive;
+    font-size:28px;
+    color:#1c1c1c;
+    margin:0;
+  }
+  .sig-name{
+    font-size:11px;
+    font-weight:700;
+    color:var(--navy);
+    margin:2px 0 0 0;
+  }
+  .sig-role{
+    font-size:11px;
+    font-weight:700;
+    color:var(--navy);
+    margin:0;
+  }
+
+  @media (max-width:480px){
+    .content{padding:24% 6% 6% 6%;}
+    .footer{flex-direction:column;align-items:flex-start;gap:16px;}
+    .signature-block{text-align:left;}
+  }
+</style>
+</head>
+<body>
+
+<div class="certificate">
+  <svg class="deco-svg" viewBox="0 0 600 659" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <g>
+            <polygon points="0,0 263,0 0,169" fill="#0b2d4d"/>
+    </g>
+    <!-- full-width navy bars at top and bottom (behind corner decoration) -->
+    <rect x="0" y="0" width="600" height="32" fill="#0b2d4d"/>
+    <rect x="0" y="32" width="600" height="6" fill="#ffffff"/>
+    <rect x="0" y="38" width="600" height="11" fill="#0b2d4d"/>
+
+    <g>
+      <polygon points="600,659 402.75,659 600,532.25" fill="#0b2d4d"/>
+    </g>
+    <g transform="translate(0,659) scale(1,-1)">
+      <rect x="0" y="0" width="600" height="32" fill="#0b2d4d"/>
+      <rect x="0" y="32" width="600" height="6" fill="#ffffff"/>
+      <rect x="0" y="38" width="600" height="11" fill="#0b2d4d"/>
+    </g>
+
+    <!-- top-left nested diagonal corner: gold / orange / navy / white gap / navy (original size) -->
+    <g>
+      <polygon points="0,0 240,0 0,156" fill="#ffffff"/>
+      <polygon points="0,0 228,0 0,148" fill="#0b2d4d"/>
+      <polygon points="0,0 137,0 0,104"  fill="#e8b339"/>
+      <polygon points="0,0 137,0 0,80" fill="#0b2d4d"/>
+      <polygon points="0,0 137,0 0,57"  fill="#F0D27B"/>
+    </g>
+
+    <!-- bottom-right corner (smaller than top-left, independent) -->
+    <g>
+      <polygon points="600,659 420,659 600,542"        fill="#ffffff"/>
+      <polygon points="600,659 429,659 600,548"        fill="#0b2d4d"/>
+      <polygon points="600,659 470.5,659 600,580.75"     fill="#e8b339"/>
+      <polygon points="600,659 495.75,659 600,580.75"   fill="#0b2d4d"/>
+      <polygon points="600,659 520.75,659 600,580.75"   fill="#F0D27B"/>
+    </g>
+  </svg>
+
+  <svg class="frame-svg" viewBox="0 0 600 659" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- thin gold frame; corners are cut at the same angle as the gold corner-tips so the
+         frame line meets the decoration exactly instead of leaving a gap -->
+    <path d="M74.6,33 L576,33 L576,619.7 L546.75,633 L24,633 L24,56.1 Z"
+          fill="none" stroke="#e8b339" stroke-width="3.5" />
+  </svg>
+
+  <div class="content">
+    <h1 class="title">CERTIFICATE</h1>
+    <div class="subtitle">OF PROJECT COMPLETION</div>
+
+    <p class="body-text">
+      I hereby affirm, to the best of my knowledge and belief, based on inspections,
+      observations, testing of the project, and upon reports submitted by others, that
+      this <b>Website Traffic Analysis System for E-Commerce Platforms</b> is
+      substantially complete and fully functional. The Website Traffic Analysis
+      System for E-Commerce Platforms was developed in adherence to the
+      department's issued guidelines.
+    </p>
+
+    <div class="section-heading">Project Manager Information</div>
+    <p class="pm-name">Mr. Rahul Kumar</p>
+    <p class="pm-info">
+      Cloud Detox Pvt. Ltd.<br>
+      B 14-15, Udhyog Marg, Block B,<br>
+      Sector 15, Noida, Uttar Pradesh, 201301 India
+    </p>
+
+    <div class="section-heading dark">Project Domain</div>
+    <p class="domain-text">E-Commerce - Website Traffic Analysis</p>
+
+    <div class="section-heading dark">Project Description</div>
+    <p class="desc-text">
+      Analyze website traffic data to understand user behavior and improve user
+      experience to get maximum increase in users for better revenue and
+      improvement in profit%.
+    </p>
+
+    <div class="footer">
+      <div>
+        <p class="completion-date"><b>Project Completion Date:</b> <span id="completionDate"></span></p>
+        <div class="logo-block">
+          <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L3 6V12C3 17 7 21 12 22C17 21 21 17 21 12V6L12 2Z" fill="#1ba9e1"/>
+            <path d="M8.5 12.5L11 15L16 9.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <div class="logo-text">
+            <div class="cloud">CLOUD</div>
+            <div class="detox">DETOX</div>
+          </div>
+        </div>
+      </div>
+      <div class="signature-block">
+        <p class="signature">Rahul Kumar</p>
+        <p class="sig-name">Rahul Kumar</p>
+        <p class="sig-role">Project Manager</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function ordinalSuffix(d){
+    if(d>3 && d<21) return 'th';
+    switch(d%10){
+      case 1: return 'st';
+      case 2: return 'nd';
+      case 3: return 'rd';
+      default: return 'th';
+    }
+  }
+  const now = new Date();
+  const day = now.getDate();
+  const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  const formatted = day + ordinalSuffix(day) + " " + months[now.getMonth()] + " " + now.getFullYear();
+  document.getElementById('completionDate').textContent = formatted;
+</script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Certificate of Project Completion</title>
+    <style>
+      :root {
+        --primary-blue: #133d7a;
+        --accent-blue: #3e68f0;
+        --dark-text: #1f2638;
+        --light-gray: #f6f7fa;
+        --gold: #d9b55a;
+        --gold-light: #f3dfa5;
+        --gold-dark: #9c7a2e;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #e7e9ee;
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      }
+
+      .page-wrap {
+        display: flex;
+        justify-content: center;
+        padding: 24px 0 60px;
+      }
+
+      .certificate {
+        position: relative;
+        width: 210mm;
+        height: 297mm;
+        background: #ffffff;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+        background: url(bg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+      }
+
+      /* ===================== DECORATIVE LAYERS ===================== */
+
+      .deco-svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+      }
+
+      .top-left-deco {
+        top: 0;
+        left: 0;
+        width: 340px;
+        height: 340px;
+        z-index: 2;
+      }
+
+      .bottom-right-deco {
+        bottom: 0;
+        right: 0;
+        top: auto;
+        left: auto;
+        width: 520px;
+        height: 420px;
+        z-index: 2;
+      }
+
+      .grey-curves {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      .dots-left {
+        top: 380px;
+        left: 18px;
+        width: 30px;
+        height: 520px;
+        z-index: 3;
+      }
+
+      .dots-right {
+        top: 380px;
+        right: 18px;
+        left: auto;
+        width: 30px;
+        height: 520px;
+        z-index: 3;
+      }
+
+      /* ===================== CONTENT ===================== */
+
+      .content {
+        position: relative;
+        z-index: 5;
+        padding: 34px 70px 50px;
+        height: 100%;
+      }
+
+      .top-bar {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        margin-bottom: 6px;
+      }
+
+      .seal-wrap {
+        display: flex;
+        justify-content: center;
+      }
+
+      .seal-wrap img{
+        height: 100px;
+        width: 100px;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .logo-area {
+        position: absolute;
+        right: 0;
+        top: 6px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo-area img {
+        width: 44px;
+        height: 44px;
+        object-fit: contain;
+      }
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.05;
+      }
+
+      .logo-text span {
+        font-weight: 800;
+        font-size: 19px;
+        letter-spacing: 2px;
+        color: var(--primary-blue);
+      }
+
+      .titles {
+        text-align: center;
+        margin-top: 8px;
+      }
+
+      .titles h1 {
+        font-size: 64px;
+        font-weight: 800;
+        color: var(--primary-blue);
+        margin: 0;
+        letter-spacing: 1px;
+      }
+
+      .titles h2 {
+        font-size: 22px;
+        font-weight: 400;
+        color: var(--dark-text);
+        margin: 6px 0 0;
+        letter-spacing: 3px;
+      }
+
+      .intro-text {
+        text-align: center;
+        color: #6b7280;
+        font-size: 16px;
+        margin: 34px 0 6px;
+      }
+
+      .recipient-name {
+        text-align: center;
+        font-size: 54px;
+        font-weight: 700;
+        color: var(--accent-blue);
+        margin: 4px 0 28px;
+      }
+
+      .description {
+        width: 78%;
+        margin: 0 auto 22px;
+        text-align: justify;
+        font-size: 17px;
+        line-height: 1.9;
+        color: var(--dark-text);
+      }
+
+      .description p {
+        margin: 0 0 18px;
+      }
+
+      .description b {
+        font-weight: 700;
+      }
+
+      .project-info {
+        text-align: center;
+        margin-bottom: 18px;
+      }
+
+      .project-info h3 {
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        color: var(--dark-text);
+        margin: 0 0 10px;
+      }
+
+      .project-info .row {
+        font-size: 16px;
+        color: var(--dark-text);
+        margin: 4px 0 4px -20px;
+      }
+
+      .project-info .row b {
+        font-weight: 700;
+        letter-spacing: 0.3px;
+      }
+
+      .project-desc-block {
+        width: 100%;
+        margin: 14px auto 0;
+        font-size: 16px;
+        line-height: 1.85;
+        text-align: justify;
+        color: var(--dark-text);
+      }
+
+      .project-desc-block b {
+        font-weight: 700;
+      }
+
+      .completion-date {
+        width: 100%;
+        margin: 14px auto 0;
+        font-size: 16px;
+        color: var(--dark-text);
+        text-align: left;
+      }
+
+      .completion-date b {
+        font-weight: 700;
+      }
+
+      .signature-block {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .signature-block img {
+        height: 60px;
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .signature-line {
+        font-size: 15px;
+        color: var(--dark-text);
+        line-height: 1.5;
+      }
+
+      .signature-line .name {
+        font-weight: 700;
+      }
+
+      .signature-line .role,
+      .signature-line .org {
+        font-weight: 700;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .page-wrap {
+          padding: 0;
+        }
+        .certificate {
+          box-shadow: none;
+        }
+      }
+
+      @media screen and (max-width: 900px) {
+        .certificate {
+          width: 100%;
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <div class="certificate">
+        <!-- ===================== CONTENT ===================== -->
+        <div class="content">
+          <div class="top-bar">
+            <div class="seal-wrap">
+              <img src="seal.png" alt="" srcset="">
+            </div>
+
+            <div class="logo-area">
+              <img src="" alt="logo" />
+              <div class="logo-text">
+                <span>CLOUD</span>
+                <span>DETOX</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="titles">
+            <h1>CERTIFICATE</h1>
+            <h2>OF PROJECT COMPLETION</h2>
+          </div>
+
+          <p class="intro-text">This certificate is proudly presented to</p>
+          <h2 class="recipient-name">Aryan Sharma</h2>
+
+          <div class="description">
+            <p>
+              For successfully completing the project titled "<b
+                >Customer Churn Analysis System</b
+              >" and demonstrating exceptional skills in data analysis, business
+              intelligence, and problem-solving.
+            </p>
+            <p>
+              The project was developed to analyze customer behavior, identify
+              churn patterns, and generate actionable insights through data
+              visualization and reporting. The successful completion of this
+              project reflects a strong understanding of analytical techniques
+              and data-driven decision-making.
+            </p>
+          </div>
+
+          <div class="project-info">
+            <h3>Project Information</h3>
+            <div class="row"><b>Manager:</b> Mr. Satya Shah</div>
+            <div class="row">
+              <b>Project Domain:</b> Data Analytics &amp; Business Intelligence
+            </div>
+          </div>
+
+          <div class="project-desc-block">
+            <b>Project Description:</b> This project focuses on analyzing
+            customer data to identify trends, predict churn risks, and support
+            customer retention strategies through interactive dashboards and
+            performance reports.
+          </div>
+
+          <div class="completion-date">
+            <b>Project Completion Date:</b> 10th December 2025
+          </div>
+
+          <div class="signature-block">
+            <img src="" alt="signature" />
+            <div class="signature-line">
+              <div class="name">Satya Shah</div>
+              <div class="role">Project Manager</div>
+              <div class="org">Cloud Detox</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
